@@ -1,24 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!--  -->
     <meta
       property="og:title"
       content="Interactive pricing component | Frontend Mentor | Alamin"
     />
 
-    <meta
-      name="description"
-      content=""
-    />
+    <meta name="description" content="" />
 
-    <meta
-      property="og:description"
-      content=""
-    />
+    <meta property="og:description" content="" />
 
     <meta
       property="og:image"
@@ -32,10 +26,7 @@
 
     <meta name="author" content="Alamin | CodePapa360" />
 
-    <meta
-      name="keywords"
-      content="CodePapa360, Alamin"
-    />
+    <meta name="keywords" content="CodePapa360, Alamin" />
 
     <meta name="twitter:card" content="summary_large_image" />
 
@@ -49,10 +40,7 @@
       content="@https://interactive-pricing-component-alamin.netlify.app/"
     />
 
-    <meta
-      name="twitter:description"
-      content=""
-    />
+    <meta name="twitter:description" content="" />
 
     <meta
       name="twitter:image"
@@ -65,61 +53,96 @@
     />
     <!--  -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Interactive pricing component | Frontend Mentor | Alamin</title>
-</head>
-<body>
-      <!--  -->
-      <div class="dark-mode-container">
-        <input
-          type="checkbox"
-          class="dark-mode-checkbox"
-          id="dark-mode-checkbox"
-        />
-        <label for="dark-mode-checkbox" class="dark-mode-lebel"></label>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- <link rel="stylesheet" href="../css/main.css" />
+    <script src="../src/js/index.js"></script> -->
+
+    <title>Interactive pricing component | Frontend Mentor | Alamin</title>
+  </head>
+  <body>
+    <!--  -->
+    <div class="dark-mode-container">
+      <input
+        type="checkbox"
+        class="dark-mode-checkbox"
+        id="dark-mode-checkbox"
+      />
+      <label for="dark-mode-checkbox" class="dark-mode-lebel"></label>
+    </div>
+    <!--  -->
+
+    <main class="main">
+      <section class="heading-section">
+        <h1 class="heading">Simple, traffic-based pricing</h1>
+        <p class="intro-paragraph">
+          Sign-up for our 30-day trial. No credit card required.
+        </p>
+      </section>
+
+      <form class="form" action="#">
+        <div class="form-top-section">
+          <p class="page-view">100k Pageviews</p>
+          <input
+            class="slider"
+            type="range"
+            name="Price range"
+            id="price-range"
+          />
+          <p class="monthly-price"><span>$16.00</span> /month</p>
+          <div class="checkbox-container">
+            <p>Monthly Billing</p>
+            <input
+              type="checkbox"
+              name="Duration Checkbox"
+              id="duration-ckeckbox"
+            />
+            <p>Yearly Billing</p>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="form-bottom-section">
+          <div class="features">
+            <p class="feature">Unlimited websites</p>
+            <p class="feature">100% data ownership</p>
+            <p class="feature">Email reports</p>
+          </div>
+
+          <button class="btn-submit" type="submit">Start my trial</button>
+        </div>
+      </form>
+    </main>
+
+    <footer class="footer">
+      <div class="attribution-wrapper">
+        <p class="attribution">
+          <span>
+            Coded by
+            <a
+              class="attb-link"
+              href="https://twitter.com/CodePapa360"
+              target="_blank"
+              >Alamin</a
+            >
+          </span>
+          <span>
+            Challenge by
+            <a
+              class="attb-link attb-fem"
+              href="https://www.frontendmentor.io/profile/CodePapa360"
+              target="_blank"
+              >Frontend Mentor</a
+            >
+          </span>
+        </p>
       </div>
-      <!--  -->
-<textarea">
-Simple, traffic-based pricing
-Sign-up for our 30-day trial. No credit card required. 
-
-  Pageviews
-  $ /month
-
-  Monthly Billing
-  Yearly Billing 25% discount
-
-  Unlimited websites
-  100% data ownership
-  Email reports
-
-  Start my trial
-</textarea>
-
-<footer class="footer">
-  <div class="attribution-wrapper">
-    <p class="attribution">
-      <span>
-        Coded by
-        <a
-          class="attb-link"
-          href="https://twitter.com/CodePapa360"
-          target="_blank"
-          >Alamin</a
-        >
-      </span>
-      <span>
-        Challenge by
-        <a
-          class="attb-link attb-fem"
-          href="https://www.frontendmentor.io/profile/CodePapa360"
-          target="_blank"
-          >Frontend Mentor</a
-        >
-      </span>
-    </p>
-  </div>
-</footer>
-</body>
+    </footer>
+  </body>
 </html>

@@ -1,0 +1,149 @@
+.heading-section {
+  background-image: url(../images/pattern-circles.svg);
+  // background-image: url(../src/images/pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-bottom: 3rem;
+
+  padding: 2rem 0;
+  .heading {
+    font-size: 1.4rem;
+    color: var(--dark-desaturated-blue);
+    margin-bottom: 1rem;
+
+    @media screen and (min-width: 30rem) {
+      font-size: 1.6rem;
+    }
+  }
+
+  .intro-paragraph {
+    font-size: 0.8rem;
+    width: 50%;
+    margin: auto;
+
+    @media screen and (min-width: 30rem) {
+      width: 100%;
+    }
+  }
+}
+
+.form {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 2rem 1rem;
+
+  @media screen and (min-width: 30rem) {
+    padding: 2rem;
+  }
+
+  .form-top-section {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "page-view"
+      "slider"
+      "monthly-price"
+      "checkbox";
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+    @media screen and (min-width: 30rem) {
+      grid-template-columns: 1fr 1fr;
+
+      grid-template-areas:
+        "page-view monthly-price"
+        "slider slider"
+        "checkbox checkbox";
+    }
+
+    .page-view {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      grid-area: page-view;
+    }
+
+    .slider {
+      grid-area: slider;
+    }
+
+    .monthly-price {
+      grid-area: monthly-price;
+
+      span {
+        color: var(--dark-desaturated-blue);
+        font-size: 1.8rem;
+        font-weight: 800;
+        vertical-align: middle;
+        margin-right: 0.5rem;
+      }
+    }
+
+    .checkbox-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      grid-area: checkbox;
+    }
+  }
+
+  hr {
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid var(--light-grayish-blue);
+  }
+
+  .form-bottom-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+
+    @media screen and (min-width: 30rem) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .features {
+      line-height: 2;
+
+      @media screen and (min-width: 30rem) {
+        text-align: left;
+      }
+
+      .feature {
+        &::before {
+          content: url(../images/icon-check.svg);
+          // content: url(../src/images/icon-check.svg);
+          margin-right: 0.8rem;
+        }
+      }
+    }
+
+    .btn-submit {
+      background-color: var(--dark-desaturated-blue);
+      color: var(--pale-blue);
+      border: none;
+      padding: 0.7rem 1rem;
+      max-width: 10rem;
+      width: 100%;
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: var(--grayish-blue);
+        color: var(--dark-desaturated-blue);
+      }
+
+      &:active {
+        background-color: var(--dark-desaturated-blue);
+        color: var(--pale-blue);
+      }
+    }
+  }
+}

@@ -1,13 +1,13 @@
 .attribution-wrapper {
-  background-color: gray;
+  background-color: var(--dark-desaturated-blue);
   color: white;
   padding: 1rem;
   border-radius: 10px;
   margin-top: 1rem;
 
   .attribution {
-    --clr-attb-primary: rgb(217, 255, 0);
-    --clr-attb-secondary: rgb(226, 222, 0);
+    --clr-attb-primary: var(--strong-cyan);
+    --clr-attb-secondary: var(--soft-cyan);
     --fs-attb: calc(1rem - 2px);
     text-align: center;
     line-height: 1.4;
