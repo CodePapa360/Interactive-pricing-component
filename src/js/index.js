@@ -1,20 +1,31 @@
 "use strict";
 import "../sass/main.scss";
+const totalAmountOutput = document.getElementById("total-amount");
+const pageViewOutput = document.getElementById("page-view-text");
 
-//Dark mode veriables
-const darkModeToggle = document.getElementById("dark-mode-checkbox");
-const root = document.documentElement;
+const slider = document.getElementById("price-range");
 
-//////////////////////////////////
-//dark mode feature
-//////////////////
-const darkMode = function () {
-  root.classList.toggle("dark-mode", darkModeToggle.checked);
-  localStorage.setItem("darkMode", darkModeToggle.checked ? "on" : "off");
+//////////////////////////
+
+const totalAmount = function (range) {
+  const value = 8;
+  const count = value * (range + 1);
+  // console.log(count);
+  return count;
 };
 
-darkModeToggle.addEventListener("change", darkMode);
-window.addEventListener("load", function () {
-  darkModeToggle.checked = localStorage.getItem("darkMode") === "on";
-  darkMode();
+const views = function (range) {
+  const value = 33.333333333;
+  const count = value * (range + 1);
+
+  return Math.round(count);
+};
+
+///////////////
+slider.addEventListener("input", function () {
+  const inputedRange = +slider.value;
+
+  totalAmountOutput.textContent = `$${totalAmount(inputedRange)}.00`;
+
+  pageViewOutput.textContent = views(inputedRange);
 });

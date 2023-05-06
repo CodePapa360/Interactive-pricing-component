@@ -60,23 +60,12 @@
       href="./images/favicon-32x32.png"
     />
 
-    <!-- <link rel="stylesheet" href="../css/main.css" />
-    <script src="../src/js/index.js"></script> -->
+    <!-- <link rel="stylesheet" href="../css/main.css" /> -->
+    <!-- <script defer src="../src/js/index.js"></script> -->
 
     <title>Interactive pricing component | Frontend Mentor | Alamin</title>
   </head>
   <body>
-    <!--  -->
-    <div class="dark-mode-container">
-      <input
-        type="checkbox"
-        class="dark-mode-checkbox"
-        id="dark-mode-checkbox"
-      />
-      <label for="dark-mode-checkbox" class="dark-mode-lebel"></label>
-    </div>
-    <!--  -->
-
     <main class="main">
       <section class="heading-section">
         <h1 class="heading">Simple, traffic-based pricing</h1>
@@ -87,22 +76,31 @@
 
       <form class="form" action="#">
         <div class="form-top-section">
-          <p class="page-view">100k Pageviews</p>
+          <p class="page-view">
+            <span id="page-view-text">100</span>k Pageviews
+          </p>
           <input
             class="slider"
             type="range"
             name="Price range"
             id="price-range"
+            max="4"
+            value="2"
           />
-          <p class="monthly-price"><span>$16.00</span> /month</p>
+          <p class="total-amount">
+            <span id="total-amount">$16.00</span> /month
+          </p>
           <div class="checkbox-container">
             <p>Monthly Billing</p>
-            <input
-              type="checkbox"
-              name="Duration Checkbox"
-              id="duration-ckeckbox"
-            />
-            <p>Yearly Billing</p>
+            <div class="checkbox-wrapper">
+              <input
+                type="checkbox"
+                name="Duration Checkbox"
+                id="duration-checkbox"
+              />
+              <label class="checkbox-lable" for="duration-checkbox"></label>
+            </div>
+            <p class="yearly-billing-text">Yearly Billing</p>
           </div>
         </div>
 

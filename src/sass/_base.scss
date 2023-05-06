@@ -1,9 +1,12 @@
 :root {
   // Primary
   --soft-cyan: hsl(174, 77%, 80%); //(Full Slider Bar)
+  --light-cyan: hsl(174, 58%, 66%); //(Full Slider Bar)
   --strong-cyan: hsl(174, 86%, 45%); //(Slider Backround)
+  --strong-dark-cyan: hsl(174, 82%, 35%); //(Slider Backround)
   --light-grayish-red: hsl(14, 92%, 95%); // (Discount Background)
   --light-red: hsl(15, 100%, 70%); // (Discount Text)
+  --very-light-red: hsla(15, 100%, 70%, 0.2); // (Discount Text background)
   --pale-blue: hsl(226, 100%, 87%); // (CTA Text)
 
   // Neutral
@@ -15,9 +18,15 @@
   --dark-desaturated-blue: hsl(227, 35%, 25%); // (Text & CTA Background)
 }
 
-@media screen and (min-width: 30rem) {
-  html {
-    font-size: 110%;
+html {
+  font-size: 10px;
+
+  @media screen and (min-width: 300px) {
+    font-size: 13px;
+  }
+
+  @media screen and (min-width: 375px) {
+    font-size: 16px;
   }
 }
 

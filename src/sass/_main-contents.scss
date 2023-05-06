@@ -44,7 +44,7 @@
     grid-template-areas:
       "page-view"
       "slider"
-      "monthly-price"
+      "total-amount"
       "checkbox";
     gap: 2rem;
     margin-bottom: 2rem;
@@ -53,7 +53,7 @@
       grid-template-columns: 1fr 1fr;
 
       grid-template-areas:
-        "page-view monthly-price"
+        "page-view total-amount"
         "slider slider"
         "checkbox checkbox";
     }
@@ -65,12 +65,103 @@
       grid-area: page-view;
     }
 
+    /********** Range Input Styles **********/
+    /*Range Reset*/
     .slider {
       grid-area: slider;
+
+      -webkit-appearance: none;
+      appearance: none;
+      background: transparent;
+      width: 100%;
     }
 
-    .monthly-price {
-      grid-area: monthly-price;
+    /* Removes default focus */
+    .slider:focus {
+      outline: none;
+    }
+
+    /***** Chrome, Safari, Opera and Edge Chromium styles *****/
+    /* slider track */
+    .slider::-webkit-slider-runnable-track {
+      background-color: var(--light-grayish-blue);
+
+      border-radius: 0.5rem;
+      height: 0.5rem;
+      width: 100%;
+    }
+
+    /* slider thumb */
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none; /* Override default look */
+      appearance: none;
+      margin-top: -12px; /* Centers thumb on the track */
+
+      background-color: var(--strong-cyan);
+      border: none;
+      height: 2rem;
+      width: 2rem;
+      border-radius: 50%;
+      cursor: pointer;
+      // background-image: url(../src/images/icon-slider.svg);
+      background-image: url(../images/icon-slider.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 60%;
+
+      &:hover {
+        background-color: var(--light-cyan);
+      }
+
+      &:active {
+        background-color: var(--strong-dark-cyan);
+        cursor: grab;
+      }
+    }
+
+    .slider:focus::-webkit-slider-thumb {
+      border: none;
+      outline: none;
+    }
+
+    /******** Firefox styles ********/
+    /* slider track */
+    .slider::-moz-range-track {
+      background-color: var(--light-grayish-blue);
+      border-radius: 5px;
+      height: 0.5rem;
+      width: 100%;
+    }
+
+    /* slider thumb */
+    .slider::-moz-range-thumb {
+      border: none; /*Removes extra border that FF applies*/
+      border-radius: 0; /*Removes default border-radius that FF applies*/
+
+      background-color: var(--strong-cyan);
+      border: none;
+      height: 2rem;
+      width: 2rem;
+      border-radius: 50%;
+      cursor: pointer;
+      // background-image: url(../src/images/icon-slider.svg);
+      background-image: url(../images/icon-slider.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 60%;
+
+      &:hover {
+        background-color: var(--light-cyan);
+      }
+
+      &:active {
+        background-color: var(--strong-dark-cyan);
+        cursor: grab;
+      }
+    }
+
+    .total-amount {
+      grid-area: total-amount;
 
       span {
         color: var(--dark-desaturated-blue);
@@ -85,7 +176,83 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      gap: 1rem;
       grid-area: checkbox;
+      font-size: 0.65rem;
+
+      .checkbox-wrapper {
+        #duration-checkbox {
+          display: none;
+        }
+
+        .checkbox-lable {
+          --clr-bg: var(--light-grayish-blue);
+          --clr-border: var(--light-grayish-blue);
+          --sh-height: 1.2rem;
+          --border: calc(var(--sh-height) / 5);
+          position: relative;
+          display: block;
+          width: calc(var(--sh-height) * 2);
+          height: var(--sh-height);
+          background: var(--clr-bg);
+          border-radius: 99999px;
+          border: var(--border) solid var(--clr-border);
+          cursor: pointer;
+
+          &:hover {
+            --clr-bg: var(--soft-cyan);
+            --clr-border: var(--soft-cyan);
+          }
+
+          &::before {
+            content: "";
+            display: inline-block;
+            --clr-circle: var(--very-pale-lue);
+            --circle: calc(var(--sh-height) - var(--border) * 2);
+            position: absolute;
+            top: 50%;
+            left: 0%;
+            transform: translateY(-50%);
+
+            width: var(--circle);
+            height: var(--circle);
+            border-radius: 99999px;
+            background-color: var(--clr-circle);
+            transition: left 0.2s ease-in-out, transform 0.1s ease;
+          }
+        }
+
+        #duration-checkbox:checked ~ .checkbox-lable::before {
+          left: calc(100% - var(--circle));
+          transform: translateY(-50%);
+        }
+
+        #duration-checkbox:checked ~ .checkbox-lable {
+          --clr-bg: var(--strong-cyan);
+          --clr-border: var(--strong-cyan);
+        }
+      }
+
+      .yearly-billing-text {
+        position: relative;
+
+        &::after {
+          content: "-25%";
+          background-color: var(--very-light-red);
+          border-radius: 999px;
+          color: var(--light-red);
+          padding: 0.1rem 0.5rem;
+          // margin-left: 0.5rem;
+
+          position: absolute;
+          top: 0;
+          left: 110%;
+          @media screen and (min-width: 30rem) {
+            content: "-25 discount";
+            width: 6rem;
+          }
+        }
+      }
     }
   }
 
