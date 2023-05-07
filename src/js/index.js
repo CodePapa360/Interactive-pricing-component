@@ -1,6 +1,7 @@
 "use strict";
 import "../sass/main.scss";
 
+const root = document.documentElement;
 const form = document.querySelector(".form");
 const totalAmountOutput = document.getElementById("total-amount");
 const pageViewOutput = document.getElementById("page-view-text");
@@ -14,6 +15,10 @@ const renderOutputs = function () {
   const inputedRange = +slider.value;
   const yearly = durationCheckbox.checked;
   let totalCost = allCosts[inputedRange];
+
+  //Slider filled up value chnaging
+  const value = ((inputedRange - slider.min) / (slider.max - slider.min)) * 100;
+  root.style.setProperty("--slider-value", value + "%");
 
   if (yearly) {
     const months = totalCost * 12;
