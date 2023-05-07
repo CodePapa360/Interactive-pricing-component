@@ -16,7 +16,7 @@
 
     <meta
       property="og:image"
-      content="https://raw.githubusercontent.com/CodePapa360/Interactive-pricing-component/main/screenshots/Interactive-pricing-component-screenshot-compared-codepapa360.png"
+      content="https://raw.githubusercontent.com/CodePapa360/Interactive-pricing-component/main/screenshots/Interactive-pricing-component-screenshot-codepapa360.png"
     />
 
     <meta
@@ -44,7 +44,7 @@
 
     <meta
       name="twitter:image"
-      content="https://raw.githubusercontent.com/CodePapa360/Interactive-pricing-component/main/screenshots/Interactive-pricing-component-screenshot-compared-codepapa360.png"
+      content="https://raw.githubusercontent.com/CodePapa360/Interactive-pricing-component/main/screenshots/Interactive-pricing-component-screenshot-codepapa360.png"
     />
 
     <meta
@@ -60,9 +60,6 @@
       href="./images/favicon-32x32.png"
     />
 
-    <!-- <link rel="stylesheet" href="../css/main.css" /> -->
-    <!-- <script defer src="../src/js/index.js"></script> -->
-
     <title>Interactive pricing component | Frontend Mentor | Alamin</title>
   </head>
   <body>
@@ -77,7 +74,7 @@
       <form class="form" action="#">
         <div class="form-top-section">
           <p class="page-view">
-            <span id="page-view-text">100</span>k Pageviews
+            <span id="page-view-text">100k</span> Pageviews
           </p>
           <input
             class="slider"
@@ -87,8 +84,9 @@
             max="4"
             value="2"
           />
-          <p class="total-amount">
-            <span id="total-amount">$16.00</span> /month
+          <p class="total-amount-wrapper">
+            <span id="total-amount">$16.00</span> /
+            <span id="duration-text">month</span>
           </p>
           <div class="checkbox-container">
             <p>Monthly Billing</p>
@@ -108,9 +106,9 @@
 
         <div class="form-bottom-section">
           <div class="features">
-            <p class="feature">Unlimited websites</p>
-            <p class="feature">100% data ownership</p>
-            <p class="feature">Email reports</p>
+            <p>Unlimited websites</p>
+            <p>100% data ownership</p>
+            <p>Email reports</p>
           </div>
 
           <button class="btn-submit" type="submit">Start my trial</button>

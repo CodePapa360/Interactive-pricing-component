@@ -1,6 +1,5 @@
 .heading-section {
   background-image: url(../images/pattern-circles.svg);
-  // background-image: url(../src/images/pattern-circles.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -8,21 +7,16 @@
 
   padding: 2rem 0;
   .heading {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
     color: var(--dark-desaturated-blue);
     margin-bottom: 1rem;
-
-    @media screen and (min-width: 30rem) {
-      font-size: 1.6rem;
-    }
   }
 
   .intro-paragraph {
-    font-size: 0.8rem;
     width: 50%;
     margin: auto;
 
-    @media screen and (min-width: 30rem) {
+    @media screen and (min-width: $bp-large) {
       width: 100%;
     }
   }
@@ -32,8 +26,10 @@
   background-color: var(--white);
   border-radius: 10px;
   padding: 2rem 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 
-  @media screen and (min-width: 30rem) {
+  @media screen and (min-width: $bp-large) {
     padding: 2rem;
   }
 
@@ -49,7 +45,7 @@
     gap: 2rem;
     margin-bottom: 2rem;
 
-    @media screen and (min-width: 30rem) {
+    @media screen and (min-width: $bp-large) {
       grid-template-columns: 1fr 1fr;
 
       grid-template-areas:
@@ -59,10 +55,13 @@
     }
 
     .page-view {
-      font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 2px;
       grid-area: page-view;
+
+      @media screen and (min-width: $bp-large) {
+        text-align: left;
+      }
     }
 
     /********** Range Input Styles **********/
@@ -103,7 +102,6 @@
       width: 2rem;
       border-radius: 50%;
       cursor: pointer;
-      // background-image: url(../src/images/icon-slider.svg);
       background-image: url(../images/icon-slider.svg);
       background-repeat: no-repeat;
       background-position: center;
@@ -117,11 +115,11 @@
         background-color: var(--strong-dark-cyan);
         cursor: grab;
       }
-    }
 
-    .slider:focus::-webkit-slider-thumb {
-      border: none;
-      outline: none;
+      &:focus::-webkit-slider-thumb {
+        border: none;
+        outline: none;
+      }
     }
 
     /******** Firefox styles ********/
@@ -144,11 +142,12 @@
       width: 2rem;
       border-radius: 50%;
       cursor: pointer;
-      // background-image: url(../src/images/icon-slider.svg);
       background-image: url(../images/icon-slider.svg);
       background-repeat: no-repeat;
       background-position: center;
       background-size: 60%;
+
+      box-shadow: 0 10px 15px 5px var(--soft-cyan);
 
       &:hover {
         background-color: var(--light-cyan);
@@ -160,15 +159,19 @@
       }
     }
 
-    .total-amount {
+    .total-amount-wrapper {
       grid-area: total-amount;
 
-      span {
+      @media screen and (min-width: $bp-large) {
+        text-align: right;
+      }
+
+      #total-amount {
         color: var(--dark-desaturated-blue);
-        font-size: 1.8rem;
+        font-size: 2rem;
         font-weight: 800;
-        vertical-align: middle;
         margin-right: 0.5rem;
+        vertical-align: middle;
       }
     }
 
@@ -178,7 +181,7 @@
       align-items: center;
       gap: 1rem;
       grid-area: checkbox;
-      font-size: 0.65rem;
+      font-size: 0.7rem;
 
       .checkbox-wrapper {
         #duration-checkbox {
@@ -242,13 +245,12 @@
           border-radius: 999px;
           color: var(--light-red);
           padding: 0.1rem 0.5rem;
-          // margin-left: 0.5rem;
 
           position: absolute;
           top: 0;
           left: 110%;
-          @media screen and (min-width: 30rem) {
-            content: "-25 discount";
+          @media screen and (min-width: $bp-large) {
+            content: "25% discount";
             width: 6rem;
           }
         }
@@ -270,7 +272,7 @@
     gap: 2rem;
     margin-top: 2rem;
 
-    @media screen and (min-width: 30rem) {
+    @media screen and (min-width: $bp-large) {
       flex-direction: row;
       justify-content: space-between;
     }
@@ -278,14 +280,13 @@
     .features {
       line-height: 2;
 
-      @media screen and (min-width: 30rem) {
+      @media screen and (min-width: $bp-large) {
         text-align: left;
       }
 
-      .feature {
+      > * {
         &::before {
           content: url(../images/icon-check.svg);
-          // content: url(../src/images/icon-check.svg);
           margin-right: 0.8rem;
         }
       }

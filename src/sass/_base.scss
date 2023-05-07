@@ -18,15 +18,24 @@
   --dark-desaturated-blue: hsl(227, 35%, 25%); // (Text & CTA Background)
 }
 
-html {
-  font-size: 10px;
+$bp-large: 32em;
+$bp-small: 18.75em;
+$bp-medium: 23.438em;
 
-  @media screen and (min-width: 300px) {
+::selection {
+  background-color: var(--strong-cyan);
+  color: var(--white);
+}
+
+html {
+  font-size: 16px;
+
+  @media screen and (max-width: $bp-medium) {
     font-size: 13px;
   }
 
-  @media screen and (min-width: 375px) {
-    font-size: 16px;
+  @media screen and (max-width: $bp-small) {
+    font-size: 10px;
   }
 }
 
@@ -38,13 +47,12 @@ body {
   min-height: 100vh;
 
   background-image: url(../images/bg-pattern.svg);
-  // background-image: url(../src/images/bg-pattern.svg);
   background-repeat: no-repeat;
   background-color: var(--very-pale-lue);
 
   text-align: center;
   padding: 1rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
 
   transition: background 0.1s ease;
 }
@@ -53,7 +61,7 @@ body {
   margin: auto;
   width: 100%;
 
-  max-width: 30rem;
+  max-width: 35rem;
 }
 
 .footer {
