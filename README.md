@@ -9,7 +9,7 @@ Challenge from [Frontend Mentor](https://www.frontendmentor.io/profile/CodePapa3
 
 [🚀Live Site](https://interactive-pricing-component-alamin.netlify.app/)
 |
-[💡Frontend Mentor]()
+[💡Frontend Mentor](https://www.frontendmentor.io/solutions/responsive-interactive-pricing-component-my5J8RM48a)
 
 </h2>
 
