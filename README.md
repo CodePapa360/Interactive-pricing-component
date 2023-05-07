@@ -14,12 +14,12 @@ Challenge from [Frontend Mentor](https://www.frontendmentor.io/profile/CodePapa3
 </h2>
 
 <p align="center">
-
+This project is a user-friendly and responsive pricing plan feature created using HTML, CSS, and JavaScript. It was completed as a part of the FrontendMentor challenges to showcase my frontend development skills.
 </p>
 
 <a align="center" href="https://interactive-pricing-component-alamin.netlify.app/">
 
-![Screenshot](./screenshots/Interactive-pricing-component-screenshot-compared-codepapa360.png)
+![Screenshot](./screenshots/Interactive-pricing-component-screenshot-codepapa360.png)
 
 </a>
 
@@ -36,12 +36,19 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS custom properties
+- CSS Grid
 - JavaScript
 - Mobile-first workflow
 - NPM
 - [Webpack - a module bundler](https://webpack.js.org/)
 
 ## What I learned
+
+In this project, I practiced my front-end development skills by creating an interactive pricing component. I used HTML, CSS, and JavaScript to build the component, and I also learned how to use range input types and checkboxes to capture user input.
+
+One of the main challenges I faced was calculating the total cost based on the user's selected options. I used arrays to store the possible page views and their corresponding costs, and then used JavaScript to update the total cost and page views based on the user's input.
+
+Overall, this project helped me further develop my skills in HTML, CSS, and JavaScript, and gave me a better understanding of how to create interactive components for websites.
 
 ## Installation
 
